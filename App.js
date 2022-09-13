@@ -14,7 +14,7 @@ import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { SafeArea } from "./src/components/utility/safe-area.component";
 import { theme } from "./src/infrastructure/theme";
 import { RestaurantsScreen } from "./src/features/restaurants/screens/restaurants.screen";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 const TAB_ICON = {
   Restaurants: "md-restaurant",
