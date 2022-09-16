@@ -14,7 +14,6 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 import { Text } from "../../../components/typography/text.component";
 import { Title } from "../components/authentication.styles";
-import { Navigation } from "../../../infrastructure/navigation";
 import { ErrorContainer } from "../components/authentication.styles";
 
 export const LoginScreen = ({ navigation }) => {
