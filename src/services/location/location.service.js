@@ -3,7 +3,9 @@ import { host, isMock } from "../../utils/env";
 
 export const locationRequest = (searchTerm) => {
   return fetch(`${host}/geocode?city=${searchTerm}&mock=${isMock}`).then(
-    (res) => res.json()
+    (res) => {
+      return res.json();
+    }
   );
 };
 
