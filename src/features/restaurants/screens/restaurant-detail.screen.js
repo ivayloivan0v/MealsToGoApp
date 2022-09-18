@@ -13,15 +13,27 @@ export const RestaurantDetailScreen = ({ route }) => {
   const [dinnerExpanded, setDinnerExpanded] = useState(false);
   const [drinksExpanded, setDrinksExpanded] = useState(false);
 
+  const breakfastListIcon = (props) => (
+    <List.Icon {...props} icon="bread-slice" />
+  );
+
+  const lunchListIcon = (props) => <List.Icon {...props} icon="hamburger" />;
+
+  const dinnerListIcon = (props) => (
+    <List.Icon {...props} icon="food-variant" />
+  );
+
+  const drinksListIcon = (props) => <List.Icon {...props} icon="cup" />;
+
   const { restaurant } = route.params;
   return (
     <SafeArea>
       <RestaurantInfoCard restaurant={restaurant} />
-      <Spacer />
+      <Spacer position="bottom" size="large" />
       <ScrollView>
         <List.Accordion
           title="Breakfast"
-          left={(props) => <List.Icon {...props} icon="bread-slice" />}
+          left={breakfastListIcon}
           expanded={breakfastExpanded}
           onPress={() => setBreakfastExpanded(!breakfastExpanded)}
         >
@@ -32,7 +44,7 @@ export const RestaurantDetailScreen = ({ route }) => {
         <Divider />
         <List.Accordion
           title="Lunch"
-          left={(props) => <List.Icon {...props} icon="hamburger" />}
+          left={lunchListIcon}
           expanded={lunchExpanded}
           onPress={() => setLunchExpanded(!lunchExpanded)}
         >
@@ -45,7 +57,7 @@ export const RestaurantDetailScreen = ({ route }) => {
         <Divider />
         <List.Accordion
           title="Dinner"
-          left={(props) => <List.Icon {...props} icon="food-variant" />}
+          left={dinnerListIcon}
           expanded={dinnerExpanded}
           onPress={() => setDinnerExpanded(!dinnerExpanded)}
         >
@@ -58,7 +70,7 @@ export const RestaurantDetailScreen = ({ route }) => {
         <Divider />
         <List.Accordion
           title="Drinks"
-          left={(props) => <List.Icon {...props} icon="cup" />}
+          left={drinksListIcon}
           expanded={drinksExpanded}
           onPress={() => setDrinksExpanded(!drinksExpanded)}
         >
